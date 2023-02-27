@@ -157,7 +157,9 @@ class IndexWriter:
 
     @staticmethod
     def writeIndex(startPath, title=None, footer=None):
-        if os.path.isfile(os.path.join(startPath, "index.html")):
+        path = os.path.join(startPath, "index.html")
+        print(path)
+        if os.path.isfile(path):
             return
         filesRead = []
         dirsRead = []
